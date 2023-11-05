@@ -131,6 +131,11 @@ void load_and_run_elf(char** exe) {
     printf("Could not read PHDR\n");
     return;
   }
+
+  if (ehdr->e_type != ET_EXEC){
+    printf("Not a executable file\n");
+    return;
+  }
   no_of_program_headers = ehdr->e_phnum;
 
   sizes = (int *)malloc(no_of_program_headers * sizeof(int));
