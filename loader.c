@@ -208,3 +208,4 @@ int main(int argc, char** argv)
 }
 
 //siginfo_t info taken from https://pubs.opengroup.org/onlinepubs/007904875/functions/sigaction.html
+//ET_EXEC taken from https://wiki.osdev.org/ELF_Tutorial
